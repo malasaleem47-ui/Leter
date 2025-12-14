@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/nabeel/OneDrive/Desktop/mngo/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Love Letter to Abdullah</title>
+    <link rel="stylesheet" href="./Vintage Letter to Abdullah_files/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f5efe6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4a76a' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #5a3921;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 2px solid #d4a76a;
+        }
+        
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 3rem;
+            color: #8b4513;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #a0522d;
+        }
+        
+        .content-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .editor-section, .preview-section {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fffaf0;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e6d5b8;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #8b4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #d4a76a;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border: 1px solid #d4a76a;
+            border-radius: 5px;
+            background-color: #fffdf9;
+            resize: vertical;
+            color: #5a3921;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #a0522d;
+            box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.2);
+        }
+        
+        .envelope-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .envelope {
+            position: relative;
+            width: 320px;
+            height: 220px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            margin-bottom: 30px;
+        }
+        
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+        
+        .envelope-body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #d4a76a;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .envelope-flap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #c18f52;
+            clip-path: polygon(50% 50%, 0 0, 100% 0);
+            border-radius: 10px 10px 0 0;
+            transform-origin: top;
+            transition: transform 0.8s ease;
+            z-index: 2;
+        }
+        
+        .envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+        
+        .envelope-seal {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            background-color: #8b0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            z-index: 3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #a52a2a;
+        }
+        
+        .letter-container {
+            width: 300px;
+            min-height: 200px;
+            background-color: #fffaf0;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 0;
+            transform: translateY(-200px);
+            opacity: 0;
+            transition: all 0.8s ease 0.3s;
+            border: 1px solid #e6d5b8;
+        }
+        
+        .envelope.open + .letter-container {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .letter-content {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #5a3921;
+            font-family: 'Georgia', serif;
+            white-space: pre-line;
+        }
+        
+        .letter-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #d4a76a;
+            padding-bottom: 10px;
+        }
+        
+        .letter-date {
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+            color: #a0522d;
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f3e9;
+            border-left: 4px solid #d4a76a;
+            border-radius: 3px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .instructions {
+            background-color: #fffaf0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6d5b8;
+        }
+        
+        .instructions h3 {
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        button {
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            background-color: #a0522d;
+        }
+        
+        .button-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .font-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .font-btn {
+            background-color: #d4a76a;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        
+        .font-btn.active {
+            background-color: #8b4513;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-top: 25px;
+            text-align: right;
+            color: #8b0000;
+        }
+        
+        .heart-signature {
+            color: #e74c3c;
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+        
+        .birthday-note {
+            text-align: center;
+            background-color: #f9f3e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #8b4513;
+            border: 1px dashed #d4a76a;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #a0522d;
+            font-style: italic;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .content-area {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .envelope {
+                width: 280px;
+                height: 190px;
+            }
+            
+            .letter-container {
+                width: 260px;
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="./Vintage Letter to Abdullah_files/css2" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-heart"></i> A Vintage Love Letter <i class="fas fa-heart"></i></h1>
+            <p class="subtitle">For Abdullah, with all my heart on your birthday</p>
+        </header>
+        
+        <div class="content-area">
+            <section class="editor-section">
+                <h2><i class="fas fa-pen-fancy"></i> Your Love Letter</h2>
+                <div class="birthday-note">
+                    <i class="fas fa-birthday-cake"></i> A Birthday Letter for Abdullah <i class="fas fa-birthday-cake"></i>
+                </div>
+                <textarea id="letterInput">My Dearest Love,
+
+Happiest Birthday to you, Abdullah. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.
+
+Forever and always.
+
+
+I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…
+
+"May time keep you alive.
+May springs sacrifice themselves for you and grieve at the thought of being separated from you.
+If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.
+May the doors of mercy remain open for you and never receive the command to close.
+May the shadows of restlessness become blind and deaf, finding no path that leads them to you.
+May the water of eternal life flow through your being."
+
+Yours JUNAINAH💗</textarea>
+                
+                <div class="controls">
+                    <div class="font-controls">
+                        <button class="font-btn active" data-font="georgia">Classic</button>
+                        <button class="font-btn" data-font="&#39;Dancing Script&#39;, cursive">Elegant</button>
+                        <button class="font-btn" data-font="&#39;Times New Roman&#39;, serif">Traditional</button>
+                    </div>
+                    
+                    <div class="button-row">
+                        <button id="previewBtn"><i class="fas fa-eye"></i> Update Preview</button>
+                        <button id="saveBtn"><i class="fas fa-download"></i> Save Letter</button>
+                        <button id="printBtn"><i class="fas fa-print"></i> Print Letter</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="preview-section">
+                <h2><i class="fas fa-envelope"></i> Your Vintage Letter</h2>
+                <p style="margin-bottom: 20px; text-align: center; color: #a0522d;">Click the envelope to open your love letter to Abdullah</p>
+                
+                <div class="envelope-container">
+                    <div class="envelope open" id="envelope">
+                        <div class="envelope-body"></div>
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-seal">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="letter-container" id="letterContainer">
+                        <div class="letter-header">
+                            <h3>To My Dearest Abdullah</h3>
+                            <p>On Your Special Day</p>
+                        </div>
+                        <div class="letter-content" id="letterPreview"><p>My Dearest Love,</p><p>Happiest Birthday to you, Abdullah. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.</p><p>Forever and always.</p><p><br>I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…</p><p></p><div class="quote">"May time keep you alive.<br>May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>May the doors of mercy remain open for you and never receive the command to close.<br>May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>May the water of eternal life flow through your being."</div><p></p><p>Yours JUNAINAH💗</p></div>
+                        <div class="letter-date" id="letterDate">December 14, 2025</div>
+                        <div class="signature" id="letterSignature">Yours JUNAINAH <span class="heart-signature">💗</span></div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button id="toggleEnvelope"><i class="fas fa-envelope-open"></i> Open/Close Envelope</button>
+                    <button id="resetBtn" style="background-color: #a0522d;"><i class="fas fa-redo"></i> Reset Letter</button>
+                </div>
+            </section>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> How to Share This Love Letter</h3>
+            <ol>
+                <li><strong>Save this page</strong>: Right-click anywhere on the page and select "Save As" to save as an HTML file</li>
+                <li><strong>Open the envelope</strong>: Click on the vintage envelope or the "Open/Close Envelope" button to reveal the letter</li>
+                <li><strong>Share with Abdullah</strong>: You can send him the HTML file, print the letter, or copy the text to send in a message</li>
+                <li><strong>Personalize</strong>: Feel free to edit the text in the left panel to make it even more personal</li>
+                <li><strong>Choose a font</strong>: Select different font styles to see how your letter looks with different aesthetics</li>
+            </ol>
+            <p style="margin-top: 15px; font-style: italic; color: #8b4513;">
+                <i class="fas fa-heart"></i> This beautiful letter will be a memorable birthday gift for Abdullah. The vintage design adds a timeless, romantic touch.
+            </p>
+        </div>
+        
+        <footer>
+            <p>Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> for Junainah to express love to Abdullah</p>
+            <p>May your love story continue to blossom with each passing day</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const envelope = document.getElementById('envelope');
+            const toggleEnvelopeBtn = document.getElementById('toggleEnvelope');
+            const letterInput = document.getElementById('letterInput');
+            const previewBtn = document.getElementById('previewBtn');
+            const saveBtn = document.getElementById('saveBtn');
+            const printBtn = document.getElementById('printBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const letterPreview = document.getElementById('letterPreview');
+            const letterDate = document.getElementById('letterDate');
+            const fontButtons = document.querySelectorAll('.font-btn');
+            const letterSignature = document.getElementById('letterSignature');
+            
+            // Set current date
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            letterDate.textContent = now.toLocaleDateString('en-US', options);
+            
+            // Initial preview
+            updatePreview();
+            
+            // Auto-open envelope after 2 seconds
+            setTimeout(() => {
+                envelope.classList.add('open');
+            }, 2000);
+            
+            // Envelope toggle functionality
+            envelope.addEventListener('click', toggleEnvelope);
+            toggleEnvelopeBtn.addEventListener('click', toggleEnvelope);
+            
+            function toggleEnvelope() {
+                envelope.classList.toggle('open');
+            }
+            
+            // Update preview functionality
+            previewBtn.addEventListener('click', updatePreview);
+            
+            function updatePreview() {
+                let text = letterInput.value;
+                
+                // Format the text with paragraph breaks
+                text = text.replace(/\n\n/g, '</p><p>');
+                text = text.replace(/\n/g, '<br>');
+                
+                // Highlight the quoted section
+                text = text.replace(/"May time keep you alive.*flow through your being."/gs, function(match) {
+                    return '</p><div class="quote">' + match + '</div><p>';
+                });
+                
+                letterPreview.innerHTML = '<p>' + text + '</p>';
+                
+                // Check if text includes a signature
+                if (text.toLowerCase().includes('juna') || text.includes('💗')) {
+                    letterSignature.innerHTML = 'Yours JUNAINAH <span class="heart-signature">💗</span>';
+                } else {
+                    letterSignature.innerHTML = 'With all my love <span class="heart-signature">💗</span>';
+                }
+            }
+            
+                    // Save letter functionality
+            saveBtn.addEventListener('click', function() {
+                const text = letterInput.value;
+                const blob = new Blob([text], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'my_love_letter.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                // Show a small confirmation
+                saveBtn.innerHTML = '<i class="fas fa-check"></i> Letter Saved!';
+                setTimeout(() => {
+                    saveBtn.innerHTML = '<i class="fas fa-download"></i> Save Letter';
+                }, 2000);
+            });
+            
+            // Reset functionality
+            resetBtn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to reset your letter? This will clear all text.')) {
+                    letterInput.value = '';
+                    updatePreview();
+                    envelope.classList.remove('open');
+                }
+            });
+            
+            // Font selection functionality
+            fontButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    fontButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get the font from data attribute
+                    const font = this.getAttribute('data-font');
+                    
+                    // Apply font to letter preview
+                    letterPreview.style.fontFamily = font;
+                    
+                    // Apply font to signature if it's the elegant font
+                    if (font.includes('Dancing Script')) {
+                        letterSignature.style.fontFamily = "'Dancing Script', cursive";
+                        letterSignature.style.fontSize = "1.8rem";
+                    } else {
+                        letterSignature.style.fontFamily = "inherit";
+                        letterSignature.style.fontSize = "1.5rem";
+                    }
+                });
+            });
+            
+            // Add some example letter snippets on double click in empty textarea
+            letterInput.addEventListener('dblclick', function(e) {
+                if (letterInput.value.trim() === '') {
+                    const examples = [
+                        "My Dearest,\n\nWords cannot express how much you mean to me. Each day with you is a gift I cherish deeply.\n\nLove always,",
+                        "To my one and only,\n\nThinking of you brings a smile to my face and warmth to my heart. You are my greatest adventure.\n\nYours forever,",
+                        "Beloved,\n\nIn your eyes, I've found my home. In your heart, I've found my love. In your soul, I've found my mate.\n\nWith all my love,"
+                    ];
+                    
+                    const randomExample = examples[Math.floor(Math.random() * examples.length)];
+                    letterInput.value = randomExample;
+                    updatePreview();
+                }
+            });
+        });
+    </script>
+
+
+```</body></html>
