@@ -1,137 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Antique Sealed Letter</title>
-<style>
-  body {
-    font-family: 'Cedarville Cursive', 'Georgia', serif;
-    background-color: #f4ecd8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .envelope-container {
-    position: relative;
-    width: 340px;
-    height: 240px;
-    cursor: pointer;
-    perspective: 1000px;
-  }
-
-  .envelope {
-    width: 100%;
-    height: 100%;
-    background-color: #d4a373;
-    border: 2px solid #8b5e3c;
-    border-radius: 5px;
-    position: relative;
-    box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
-    transform-style: preserve-3d;
-    transition: transform 1s;
-  }
-
-  .envelope::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0; 
-    height: 0; 
-    border-left: 170px solid transparent;
-    border-right: 170px solid transparent;
-    border-bottom: 120px solid #c4865d;
-    z-index: 2;
-  }
-
-  .seal {
-    width: 50px;
-    height: 50px;
-    background-color: #8b0000;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: inset -2px -2px 5px rgba(0,0,0,0.3);
-    z-index: 3;
-    transition: all 0.5s;
-  }
-
-  .letter {
-    display: none;
-    width: 300px;
-    height: 200px;
-    background: url('https://i.imgur.com/0oO8bjt.png');
-    background-size: cover;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #d2b48c;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-family: 'Cedarville Cursive', 'Times New Roman', serif;
-    font-size: 18px;
-    color: #4b2e2e;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-
-  .envelope.open {
-    transform: rotateX(180deg);
-  }
-
-  .envelope.open .letter {
-    display: block;
-    animation: unfold 0.7s ease forwards;
-  }
-
-  .envelope.open .seal {
-    transform: translateX(-50%) scale(0);
-    opacity: 0;
-  }
-
-  @keyframes unfold {
-    0% { transform: scaleY(0); opacity: 0; }
-    100% { transform: scaleY(1); opacity: 1; }
-  }
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Letter to Abdullah - From Junainah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f5efe6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4a76a' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #5a3921;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.8rem;
+            color: #8b4513;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #a0522d;
+        }
+        
+        .envelope-container {
+            position: relative;
+            width: 320px;
+            height: 220px;
+            margin: 0 auto 40px;
+            cursor: pointer;
+        }
+        
+        .envelope {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease;
+            z-index: 10;
+        }
+        
+        .envelope-body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #d4a76a;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .envelope-flap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #c18f52;
+            clip-path: polygon(50% 50%, 0 0, 100% 0);
+            border-radius: 10px 10px 0 0;
+            transform-origin: top;
+            transition: transform 0.8s ease;
+        }
+        
+        .envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+        
+        .envelope-seal {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            background-color: #8b0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #a52a2a;
+        }
+        
+        .letter-container {
+            width: 300px;
+            min-height: 400px;
+            background-color: #fffaf0;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            transform: translateY(-180px);
+            opacity: 0;
+            transition: all 0.8s ease 0.3s;
+            border: 1px solid #e6d5b8;
+            text-align: left;
+        }
+        
+        .envelope.open ~ .letter-container {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .letter-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5a3921;
+            white-space: pre-line;
+            font-family: 'Georgia', serif;
+        }
+        
+        .letter-header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px dashed #d4a76a;
+            padding-bottom: 15px;
+        }
+        
+        .letter-header h2 {
+            color: #8b4513;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f9f3e9;
+            border-left: 4px solid #d4a76a;
+            border-radius: 3px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .signature {
+            font-family: 'Courier New', monospace;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            text-align: right;
+            color: #8b0000;
+            font-weight: bold;
+        }
+        
+        .heart {
+            color: #e74c3c;
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+        
+        .date {
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+            color: #a0522d;
+            font-size: 1rem;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            background-color: #a0522d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #saveBtn {
+            background-color: #2e8b57;
+        }
+        
+        #saveBtn:hover {
+            background-color: #3cb371;
+        }
+        
+        #shareBtn {
+            background-color: #4682b4;
+        }
+        
+        #shareBtn:hover {
+            background-color: #5a9bd4;
+        }
+        
+        .instructions {
+            background-color: #fffaf0;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6d5b8;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            color: #8b4513;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #a0522d;
+            font-style: italic;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .envelope-container {
+                width: 280px;
+                height: 190px;
+            }
+            
+            .letter-container {
+                width: 260px;
+                padding: 20px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            button {
+                width: 250px;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>💌 A Letter for Abdullah 💌</h1>
+            <p class="subtitle">From Junainah with all my heart on your birthday</p>
+        </header>
+        
+        <div class="envelope-container">
+            <div class="envelope" id="envelope">
+                <div class="envelope-body"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-seal">💖</div>
+            </div>
+            
+            <div class="letter-container" id="letterContainer">
+                <div class="letter-header">
+                    <h2>My Dearest Abdullah,</h2>
+                    <p>On Your Special Birthday</p>
+                </div>
+                
+                <div class="letter-content" id="letterContent">
+Happiest Birthday to you. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.
 
-<div class="envelope-container" onclick="openLetter(this)">
-  <div class="envelope">
-    <div class="letter">
-       𝓗𝓪𝓹𝓹𝓲𝓮𝓼𝓽 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 𝓽𝓸 𝔂𝓸𝓾, 𝓐𝓫𝓭𝓾𝓵𝓵𝓪𝓱. 𝓜𝓪𝔂 𝔂𝓸𝓾 𝓱𝓪𝓿𝓮 𝓮𝓿𝓮𝓻𝔂𝓽𝓱𝓲𝓷𝓰 𝔂𝓸𝓾 𝔀𝓪𝓷𝓽 𝓲𝓷 𝔂𝓸𝓾𝓻 𝓵𝓲𝓯𝓮, 𝔀𝓱𝓮𝓽𝓱𝓮𝓻 𝓲𝓽 𝓲𝓼 𝓼𝓾𝓬𝓬𝓮𝓼𝓼, 𝓱𝓪𝓹𝓹𝓲𝓷𝓮𝓼𝓼, 𝓸𝓻 𝓵𝓸𝓿𝓮. 𝓘 𝓹𝓻𝓪𝔂 𝓽𝓱𝓪𝓽 𝓱𝓪𝓹𝓹𝓲𝓷𝓮𝓼𝓼 𝓪𝓵𝔀𝓪𝔂𝓼 𝓻𝓮𝓬𝓸𝓰𝓷𝓲𝔃𝓮𝓼 𝔂𝓸𝓾, 𝓪𝓷𝓭 𝓼𝓸𝓻𝓻𝓸𝔀 𝓷𝓮𝓿𝓮𝓻 𝓯𝓲𝓷𝓭𝓼 𝓲𝓽𝓼 𝔀𝓪𝔂 𝓽𝓸 𝔂𝓸𝓾. 𝓜𝓪𝔂 𝔂𝓸𝓾 𝓯𝓲𝓷𝓭 𝓼𝓸𝓶𝓮𝓸𝓷𝓮 𝓵𝓲𝓴𝓮 𝔂𝓸𝓾 𝓲𝓷 𝔂𝓸𝓾𝓻 𝓵𝓲𝓯𝓮.
+Forever and always.
 
+I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…
 
-
-𝓜𝓪𝔂 𝓽𝓲𝓶𝓮 𝓴𝓮𝓮𝓹 𝔂𝓸𝓾 𝓪𝓵𝓲𝓿𝓮.
-𝓜𝓪𝔂 𝓼𝓹𝓻𝓲𝓷𝓰𝓼 𝓼𝓪𝓬𝓻𝓲𝓯𝓲𝓬𝓮 𝓽𝓱𝓮𝓶𝓼𝓮𝓵𝓿𝓮𝓼 𝓯𝓸𝓻 𝔂𝓸𝓾 𝓪𝓷𝓭 𝓰𝓻𝓲𝓮𝓿𝓮 𝓪𝓽 𝓽𝓱𝓮 𝓽𝓱𝓸𝓾𝓰𝓱𝓽 𝓸𝓯 𝓫𝓮𝓲𝓷𝓰 𝓼𝓮𝓹𝓪𝓻𝓪𝓽𝓮𝓭 𝓯𝓻𝓸𝓶 𝔂𝓸𝓾.
-𝓘𝓯 𝓯𝓪𝓽𝓮 𝓮𝓿𝓮𝓻 𝓲𝓷𝓽𝓮𝓷𝓭𝓼 𝓽𝓸 𝔀𝓻𝓲𝓽𝓮 𝓼𝓸𝓻𝓻𝓸𝔀 𝓲𝓷 𝔂𝓸𝓾𝓻 𝓷𝓪𝓶𝓮, 𝓽𝓱𝓮𝓷 𝓘 𝓫𝓸𝔀 𝓶𝔂 𝓱𝓮𝓪𝓭 𝓲𝓷 𝓹𝓻𝓸𝓼𝓽𝓻𝓪𝓽𝓲𝓸𝓷 𝓪𝓷𝓭 𝓹𝓻𝓪𝔂 𝓽𝓱𝓪𝓽 𝓫𝓮𝓯𝓸𝓻𝓮 𝓭𝓸𝓲𝓷𝓰 𝓼𝓸, 𝓯𝓪𝓽𝓮 𝓵𝓸𝓼𝓮𝓼 𝓲𝓽𝓼 𝓶𝓮𝓶𝓸𝓻𝔂 𝓪𝓷𝓭 𝓯𝓸𝓻𝓰𝓮𝓽𝓼 𝓽𝓸 𝔀𝓻𝓲𝓽𝓮 𝓼𝓸𝓻𝓻𝓸𝔀 𝓯𝓸𝓻 𝔂𝓸𝓾.
-𝓜𝓪𝔂 𝓽𝓱𝓮 𝓭𝓸𝓸𝓻𝓼 𝓸𝓯 𝓶𝓮𝓻𝓬𝔂 𝓻𝓮𝓶𝓪𝓲𝓷 𝓸𝓹𝓮𝓷 𝓯𝓸𝓻 𝔂𝓸𝓾 𝓪𝓷𝓭 𝓷𝓮𝓿𝓮𝓻 𝓻𝓮𝓬𝓮𝓲𝓿𝓮 𝓽𝓱𝓮 𝓬𝓸𝓶𝓶𝓪𝓷𝓭 𝓽𝓸 𝓬𝓵𝓸𝓼𝓮.
-𝓜𝓪𝔂 𝓽𝓱𝓮 𝓼𝓱𝓪𝓭𝓸𝔀𝓼 𝓸𝓯 𝓻𝓮𝓼𝓽𝓵𝓮𝓼𝓼𝓷𝓮𝓼𝓼 𝓫𝓮𝓬𝓸𝓶𝓮 𝓫𝓵𝓲𝓷𝓭 𝓪𝓷𝓭 𝓭𝓮𝓪𝓯, 𝓯𝓲𝓷𝓭𝓲𝓷𝓰 𝓷𝓸 𝓹𝓪𝓽𝓱 𝓽𝓱𝓪𝓽 𝓵𝓮𝓪𝓭𝓼 𝓽𝓱𝓮𝓶 𝓽𝓸 𝔂𝓸𝓾.
-𝓜𝓪𝔂 𝓽𝓱𝓮 𝔀𝓪𝓽𝓮𝓻 𝓸𝓯 𝓮𝓽𝓮𝓻𝓷𝓪𝓵 𝓵𝓲𝓯𝓮 𝓯𝓵𝓸𝔀 𝓽𝓱𝓻𝓸𝓾𝓰𝓱 𝔂𝓸𝓾𝓻 𝓫𝓮𝓲𝓷𝓰.
-
-      𝓨𝓸𝓾𝓻𝓼 𝓕𝓸𝓻𝓮𝓿𝓮𝓻 ,
-      [𝓚𝓪𝓼𝓱𝓶𝓪𝓵𝓪 𝓢𝓪𝓵𝓮𝓮𝓶 ]
-    </div>
-    <div class="seal"></div>
-  </div>
+<div class="quote">
+"May time keep you alive.<br>
+May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
+If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
+May the doors of mercy remain open for you and never receive the command to close.<br>
+May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
+May the water of eternal life flow through your being."
 </div>
+                </div>
+                
+                <div class="date" id="currentDate"></div>
+                
+                <div class="signature">
+                    Yours always,<br>
+                    JUNAINAH <span class="heart">💗</span>
+                </div>
+            </div>
+        </div>
+        
+        <p style="margin-bottom: 20px; color: #a0522d; font-style: italic;">
+            Click the envelope to open your love letter
+        </p>
+        
+        <div class="controls">
+            <button id="openEnvelopeBtn">
+                <span>📨</span> Open/Close Envelope
+            </button>
+            <button id="saveBtn">
+                <span>💾</span> Save This Letter
+            </button>
+            <button id="shareBtn">
+                <span>📤</span> Share Letter
+            </button>
+            <button id="printBtn">
+                <span>🖨️</span> Print Letter
+            </button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Save and Share This Letter</h3>
+            <ol>
+                <li><strong>To save this page</strong>: Press <kbd>Ctrl+S</kbd> (Windows) or <kbd>Cmd+S</kbd> (Mac) and save as an HTML file</li>
+                <li><strong>To save just the letter text</strong>: Click "Save This Letter" button above</li>
+                <li><strong>To share</strong>: Click "Share Letter" to copy the text to your clipboard</li>
+                <li><strong>To print</strong>: Click "Print Letter" for a beautiful printed version</li>
+                <li><strong>To send to Abdullah</strong>: You can send him the HTML file, the saved text file, or copy and paste the text into a message</li>
+            </ol>
+            <p style="text-align: center; margin-top: 15px; font-style: italic; color: #8b4513;">
+                This letter will be a beautiful birthday surprise for Abdullah!
+            </p>
+        </div>
+        
+        <footer>
+            <p>Made with love for Junainah to express heartfelt feelings to Abdullah</p>
+            <p>Every word comes straight from the heart</p>
+        </footer>
+    </div>
 
-<script>
-  function openLetter(el) {
-    const envelope = el.querySelector('.envelope');
-    envelope.classList.toggle('open');
-  }
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current date
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+            
+            // Get elements
+            const envelope = document.getElementById('envelope');
+            const openEnvelopeBtn = document.getElementById('openEnvelopeBtn');
+            const saveBtn = document.getElementById('saveBtn');
+            const shareBtn = document.getElementById('shareBtn');
+            const printBtn = document.getElementById('printBtn');
+            
+            // Letter text content
+            const letterText = `My Dearest Abdullah,
 
+Happiest Birthday to you. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.
+
+Forever and always.
+
+I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…
+
+"May time keep you alive.
+May springs sacrifice themselves for you and grieve at the thought of being separated from you.
+If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.
+May the doors of mercy remain open for you and never receive the command to close.
+May the shadows of restlessness become blind and deaf, finding no path that leads them to you.
+May the water of eternal life flow through your being."
+
+With all my love,
+JUNAINAH 💗
+${now.toLocaleDateString('en-US', options)}`;
+            
+            // Auto-open envelope after 1 second
+            setTimeout(() => {
+                envelope.classList.add('open');
+            }, 1000);
+            
+            // Toggle envelope open/close
+            function toggleEnvelope() {
+                envelope.classList.toggle('open');
+            }
+            
+            envelope.addEventListener('click', toggleEnvelope);
+            openEnvelopeBtn.addEventListener('click', toggleEnvelope);
+            
+            // Save letter functionality
+            saveBtn.addEventListener('click', function() {
+                // Create a blob with the text
+                const blob = new Blob([letterText], { type: 'text/plain;charset=utf-8' });
+                
+                // Create a temporary link element
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'Love_Letter_to_Abdullah.txt';
+                
+                // Append to body, click, and remove
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Show confirmation
+                const originalText = saveBtn.innerHTML;
+                saveBtn.innerHTML = '<span>✅</span> Letter Saved!';
+                setTimeout(() => {
+                    saveBtn.innerHTML = originalText;
+                }, 2000);
+            });
+            
+            // Share letter functionality
+            shareBtn.addEventListener('click', function() {
+                // Try using the Web Share API if available
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'A Love Letter for Abdullah',
+                        text: letterText.substring(0, 100) + '...',
+                        url: window.location.href
+                    })
+                    .then(() => console.log('Successful share'))
+                    .catch((error) => {
+                        console.log('Error sharing:', error);
+                        copyToClipboard();
+                    });
+                } else {
+                    // Fallback to clipboard
+                    copyToClipboard();
+                }
+            });
+            
+            // Copy to clipboard function
+            function copyToClipboard() {
+                navigator.clipboard.writeText(letterText)
+                    .then(() => {
+                        const originalText = shareBtn.innerHTML;
+                        shareBtn.innerHTML = '<span>✅</span> Copied to Clipboard!';
+                        setTimeout(() => {
+                            shareBtn.innerHTML = originalText;
+                        }, 2000);
+                        
+                        alert('The letter has been copied to your clipboard! You can now paste it into any message or document to share with Abdullah.');
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy: ', err);
+                        alert('Could not copy to clipboard. Please select and copy the text manually.');
+                    });
+            }
+            
+            // Print letter functionality
+            printBtn.addEventListener('click', function() {
+                // Create a printable version
+                const printWindow = window.open('', '_blank');
+                printWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title> Letter to Abdullah</title>
+                        <style>
+                            @media print {
+                                @page { margin: 0.5in; }
+                                body { font-family: 'Georgia', serif; color: #5a3921; line-height: 1.8; }
+                                h1 { text-align: center; color: #8b4513; border-bottom: 2px solid #d4a76a; padding-bottom: 10px; }
+                                .quote { font-style: italic; margin: 25px 0; padding: 20px; background-color: #f9f3e9; border-left: 4px solid #d4a76a; }
+                                .signature { font-family: 'Courier New', monospace; font-size: 1.5rem; text-align: right; margin-top: 40px; color: #8b0000; font-weight: bold; }
+                                .date { font-style: italic; text-align: right; margin-bottom: 30px; }
+                            }
+                            body { font-family: 'Georgia', serif; color: #5a3921; line-height: 1.8; padding: 40px; max-width: 600px; margin: 0 auto; }
+                            h1 { text-align: center; color: #8b4513; border-bottom: 2px solid #d4a76a; padding-bottom: 10px; }
+                            .quote { font-style: italic; margin: 25px 0; padding: 20px; background-color: #f9f3e9; border-left: 4px solid #d4a76a; }
+                            .signature { font-family: 'Courier New', monospace; font-size: 1.5rem; text-align: right; margin-top: 40px; color: #8b0000; font-weight: bold; }
+                            .date { font-style: italic; text-align: right; margin-bottom: 30px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>A Birthday Letter to Abdullah</h1>
+                        <div class="date">${now.toLocaleDateString('en-US', options)}</div>
+                        <div>My Dearest Abdullah,</div>
+                        <br>
+                        <div>Happiest Birthday to you. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.</div>
+                        <br>
+                        <div>Forever and always.</div>
+                        <br>
+                        <div>I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…</div>
+                        <br>
+                        <div class="quote">
+                            "May time keep you alive.<br>
+                            May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
+                            If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
+                            May the doors of mercy remain open for you and never receive the command to close.<br>
+                            May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
+                            May the water of eternal life flow through your being."
+                        </div>
+                        <br>
+                        <div class="signature">
+                            Yours always,<br>
+                            JUNAINAH 💗
+                        </div>
+                    </body>
+                    </html>
+                `);
+                
+                printWindow.document.close();
+                printWindow.focus();
+                
+                // Wait a bit before printing
+                setTimeout(() => {
+                    printWindow.print();
+                    printWindow.close();
+                }, 500);
+            });
+            
+            // Add keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+S or Cmd+S to save
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    saveBtn.click();
+                }
+                
+                // Ctrl+P or Cmd+P to print
+                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    e.preventDefault();
+                    printBtn.click();
+                }
+                
+                // Space or Enter to toggle envelope
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    toggleEnvelope();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
