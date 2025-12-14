@@ -3,571 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Letter to Abdullah - From Junainah</title>
+    <title>For Abdullah 💖</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
         }
         
         body {
-            background-color: #f5efe6;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4a76a' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-            min-height: 100vh;
+            background-color: #f9f3e9;
+            font-family: 'Georgia', serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
-            color: #5a3921;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Simple heart background */
+        .heart-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
+        
+        .heart {
+            position: absolute;
+            color: rgba(231, 76, 60, 0.1);
+            font-size: 80px;
+            animation: float 15s infinite linear;
+        }
+        
+        /* Place hearts in corners */
+        .heart:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .heart:nth-child(2) { top: 15%; right: 8%; animation-delay: 3s; }
+        .heart:nth-child(3) { bottom: 20%; left: 10%; animation-delay: 6s; }
+        .heart:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 9s; }
+        .heart:nth-child(5) { top: 50%; left: 3%; animation-delay: 12s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+            25% { transform: translateY(-10px) rotate(5deg); opacity: 0.15; }
+            50% { transform: translateY(5px) rotate(-5deg); opacity: 0.2; }
+            75% { transform: translateY(-5px) rotate(5deg); opacity: 0.15; }
         }
         
         .container {
             max-width: 800px;
             width: 100%;
-            margin: 0 auto;
             text-align: center;
-        }
-        
-        header {
-            margin-bottom: 40px;
-            padding: 20px;
+            padding-top: 80px;
+            position: relative;
+            z-index: 10;
         }
         
         h1 {
-            font-family: 'Times New Roman', serif;
-            font-size: 2.8rem;
             color: #8b4513;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #a0522d;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+            background: rgba(249, 243, 233, 0.9);
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 2px solid #e6d5b8;
         }
         
         .envelope-container {
             position: relative;
             width: 320px;
             height: 220px;
-            margin: 0 auto 40px;
+            margin: 0 auto;
             cursor: pointer;
+            margin-top: 40px;
+            z-index: 10;
         }
         
         .envelope {
             position: absolute;
             width: 100%;
             height: 100%;
-            transition: transform 0.8s ease;
-            z-index: 10;
+            transition: all 0.8s ease;
+            top: 50px;
         }
         
-        .envelope-body {
+        .envelope-back {
             position: absolute;
             width: 100%;
             height: 100%;
             background-color: #d4a76a;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-            border-radius: 10px 10px 0 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
-        .envelope-flap {
+        .envelope-front {
             position: absolute;
             width: 100%;
             height: 100%;
             background-color: #c18f52;
             clip-path: polygon(50% 50%, 0 0, 100% 0);
-            border-radius: 10px 10px 0 0;
+            border-radius: 10px;
             transform-origin: top;
-            transition: transform 0.8s ease;
+            transition: transform 1s ease;
+            z-index: 2;
         }
         
-        .envelope.open .envelope-flap {
+        .envelope.open .envelope-front {
             transform: rotateX(180deg);
         }
         
-        .envelope-seal {
+        .seal {
             position: absolute;
-            bottom: 40px;
+            bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
             width: 70px;
             height: 70px;
-            background-color: #8b0000;
+            background: #8b0000;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.8rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 2px solid #a52a2a;
+            font-size: 2rem;
+            z-index: 3;
+            border: 3px solid #a52a2a;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
         }
         
-        .letter-container {
+        .letter {
             width: 300px;
             min-height: 400px;
-            background-color: #fffaf0;
+            background: #fffaf0;
+            margin: -80px auto 0;
             padding: 30px;
             border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            transform: translateY(-180px);
-            opacity: 0;
-            transition: all 0.8s ease 0.3s;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
             border: 1px solid #e6d5b8;
             text-align: left;
+            position: relative;
+            z-index: 10;
+            opacity: 0;
+            transform: translateY(-80px);
+            transition: all 1s ease 0.3s;
         }
         
-        .envelope.open ~ .letter-container {
-            transform: translateY(0);
+        .envelope.open ~ .letter {
             opacity: 1;
+            transform: translateY(0);
         }
         
         .letter-content {
             font-size: 1.1rem;
             line-height: 1.8;
             color: #5a3921;
-            white-space: pre-line;
-            font-family: 'Georgia', serif;
         }
         
         .letter-header {
             text-align: center;
             margin-bottom: 25px;
-            border-bottom: 1px dashed #d4a76a;
             padding-bottom: 15px;
+            border-bottom: 2px dashed #d4a76a;
         }
         
         .letter-header h2 {
             color: #8b4513;
             font-size: 1.8rem;
-            margin-bottom: 5px;
         }
         
-        .quote {
+        .blessing {
             font-style: italic;
             margin: 25px 0;
             padding: 20px;
-            background-color: #f9f3e9;
+            background: #f5efe6;
             border-left: 4px solid #d4a76a;
             border-radius: 3px;
-            font-size: 1.1rem;
             line-height: 1.7;
         }
         
         .signature {
-            font-family: 'Courier New', monospace;
-            font-size: 1.8rem;
-            margin-top: 30px;
             text-align: right;
+            margin-top: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
             color: #8b0000;
             font-weight: bold;
         }
         
-        .heart {
-            color: #e74c3c;
-            font-size: 2rem;
-            vertical-align: middle;
-        }
-        
-        .date {
-            font-style: italic;
-            text-align: right;
-            margin-top: 20px;
+        .click-text {
             color: #a0522d;
-            font-size: 1rem;
-        }
-        
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
             margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        
-        button {
-            background-color: #8b4513;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        button:hover {
-            background-color: #a0522d;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        #saveBtn {
-            background-color: #2e8b57;
-        }
-        
-        #saveBtn:hover {
-            background-color: #3cb371;
-        }
-        
-        #shareBtn {
-            background-color: #4682b4;
-        }
-        
-        #shareBtn:hover {
-            background-color: #5a9bd4;
-        }
-        
-        .instructions {
-            background-color: #fffaf0;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 50px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e6d5b8;
-            text-align: left;
-        }
-        
-        .instructions h3 {
-            color: #8b4513;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        
-        .instructions ol {
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .instructions li {
             margin-bottom: 10px;
-            line-height: 1.5;
+            font-style: italic;
+            position: relative;
+            z-index: 10;
+            background: rgba(249, 243, 233, 0.9);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            border: 1px solid #e6d5b8;
         }
         
         footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 50px;
             color: #a0522d;
             font-style: italic;
-            width: 100%;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 10;
+            background: rgba(249, 243, 233, 0.9);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            border: 1px solid #e6d5b8;
         }
         
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
+        @media (max-width: 600px) {
             .envelope-container {
                 width: 280px;
                 height: 190px;
+                margin-top: 50px;
             }
             
-            .letter-container {
+            .letter {
                 width: 260px;
                 padding: 20px;
+                margin-top: -60px;
+                transform: translateY(-60px);
             }
             
-            .controls {
-                flex-direction: column;
-                align-items: center;
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 70px;
             }
             
-            button {
-                width: 250px;
-                justify-content: center;
+            .container {
+                padding-top: 50px;
+            }
+            
+            .envelope {
+                top: 40px;
+            }
+            
+            .heart {
+                font-size: 50px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Simple heart background -->
+    <div class="heart-bg">
+        <div class="heart">❤️</div>
+        <div class="heart">💖</div>
+        <div class="heart">💗</div>
+        <div class="heart">💓</div>
+        <div class="heart">💕</div>
+    </div>
+    
     <div class="container">
-        <header>
-            <h1>💌 A Letter for Abdullah 💌</h1>
-            <p class="subtitle">From Junainah with all my heart on your birthday</p>
-        </header>
+        <h1>For My Dearest Abdullah 💖</h1>
         
         <div class="envelope-container">
             <div class="envelope" id="envelope">
-                <div class="envelope-body"></div>
-                <div class="envelope-flap"></div>
-                <div class="envelope-seal">💖</div>
+                <div class="envelope-back"></div>
+                <div class="envelope-front"></div>
+                <div class="seal">💖</div>
             </div>
             
-            <div class="letter-container" id="letterContainer">
+            <div class="letter" id="letter">
                 <div class="letter-header">
                     <h2>My Dearest Abdullah,</h2>
                     <p>On Your Special Birthday</p>
                 </div>
                 
-                <div class="letter-content" id="letterContent">
-Happiest Birthday to you. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.
-
-Forever and always.
-
-I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…
-
-<div class="quote">
-"May time keep you alive.<br>
-May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
-If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
-May the doors of mercy remain open for you and never receive the command to close.<br>
-May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
-May the water of eternal life flow through your being."
-</div>
+                <div class="letter-content">
+                    <p>Happiest Birthday to you, Abdullah. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.</p>
+                    
+                    <p>Forever and always.</p>
+                    
+                    <p>I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…</p>
+                    
+                    <div class="blessing">
+                        "May time keep you alive.<br>
+                        May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
+                        If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
+                        May the doors of mercy remain open for you and never receive the command to close.<br>
+                        May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
+                        May the water of eternal life flow through your being."
+                    </div>
                 </div>
-                
-                <div class="date" id="currentDate"></div>
                 
                 <div class="signature">
                     Yours always,<br>
-                    JUNAINAH <span class="heart">💗</span>
+                    JUNAINAH <span style="color:#e74c3c; font-size:2rem;">💗</span>
+                </div>
+                
+                <div style="text-align:right; margin-top:20px; font-style:italic; color:#a0522d;">
+                    15 December 2025
                 </div>
             </div>
         </div>
         
-        <p style="margin-bottom: 20px; color: #a0522d; font-style: italic;">
-            Click the envelope to open your love letter
-        </p>
-        
-        <div class="controls">
-            <button id="openEnvelopeBtn">
-                <span>📨</span> Open/Close Envelope
-            </button>
-            <button id="saveBtn">
-                <span>💾</span> Save This Letter
-            </button>
-            <button id="shareBtn">
-                <span>📤</span> Share Letter
-            </button>
-            <button id="printBtn">
-                <span>🖨️</span> Print Letter
-            </button>
-        </div>
-        
-        <div class="instructions">
-            <h3>How to Save and Share This Letter</h3>
-            <ol>
-                <li><strong>To save this page</strong>: Press <kbd>Ctrl+S</kbd> (Windows) or <kbd>Cmd+S</kbd> (Mac) and save as an HTML file</li>
-                <li><strong>To save just the letter text</strong>: Click "Save This Letter" button above</li>
-                <li><strong>To share</strong>: Click "Share Letter" to copy the text to your clipboard</li>
-                <li><strong>To print</strong>: Click "Print Letter" for a beautiful printed version</li>
-                <li><strong>To send to Abdullah</strong>: You can send him the HTML file, the saved text file, or copy and paste the text into a message</li>
-            </ol>
-            <p style="text-align: center; margin-top: 15px; font-style: italic; color: #8b4513;">
-                This letter will be a beautiful birthday surprise for Abdullah!
-            </p>
-        </div>
+        <p class="click-text">Click the envelope to open your letter</p>
         
         <footer>
-            <p>Made with love for Junainah to express heartfelt feelings to Abdullah</p>
-            <p>Every word comes straight from the heart</p>
+            Made with love for you, Abdullah
         </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set current date
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
-            
-            // Get elements
-            const envelope = document.getElementById('envelope');
-            const openEnvelopeBtn = document.getElementById('openEnvelopeBtn');
-            const saveBtn = document.getElementById('saveBtn');
-            const shareBtn = document.getElementById('shareBtn');
-            const printBtn = document.getElementById('printBtn');
-            
-            // Letter text content
-            const letterText = `My Dearest Abdullah,
-
-Happiest Birthday to you. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.
-
-Forever and always.
-
-I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…
-
-"May time keep you alive.
-May springs sacrifice themselves for you and grieve at the thought of being separated from you.
-If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.
-May the doors of mercy remain open for you and never receive the command to close.
-May the shadows of restlessness become blind and deaf, finding no path that leads them to you.
-May the water of eternal life flow through your being."
-
-With all my love,
-JUNAINAH 💗
-${now.toLocaleDateString('en-US', options)}`;
-            
-            // Auto-open envelope after 1 second
-            setTimeout(() => {
-                envelope.classList.add('open');
-            }, 1000);
-            
-            // Toggle envelope open/close
-            function toggleEnvelope() {
-                envelope.classList.toggle('open');
-            }
-            
-            envelope.addEventListener('click', toggleEnvelope);
-            openEnvelopeBtn.addEventListener('click', toggleEnvelope);
-            
-            // Save letter functionality
-            saveBtn.addEventListener('click', function() {
-                // Create a blob with the text
-                const blob = new Blob([letterText], { type: 'text/plain;charset=utf-8' });
-                
-                // Create a temporary link element
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'Love_Letter_to_Abdullah.txt';
-                
-                // Append to body, click, and remove
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                
-                // Show confirmation
-                const originalText = saveBtn.innerHTML;
-                saveBtn.innerHTML = '<span>✅</span> Letter Saved!';
-                setTimeout(() => {
-                    saveBtn.innerHTML = originalText;
-                }, 2000);
-            });
-            
-            // Share letter functionality
-            shareBtn.addEventListener('click', function() {
-                // Try using the Web Share API if available
-                if (navigator.share) {
-                    navigator.share({
-                        title: 'A Love Letter for Abdullah',
-                        text: letterText.substring(0, 100) + '...',
-                        url: window.location.href
-                    })
-                    .then(() => console.log('Successful share'))
-                    .catch((error) => {
-                        console.log('Error sharing:', error);
-                        copyToClipboard();
-                    });
-                } else {
-                    // Fallback to clipboard
-                    copyToClipboard();
-                }
-            });
-            
-            // Copy to clipboard function
-            function copyToClipboard() {
-                navigator.clipboard.writeText(letterText)
-                    .then(() => {
-                        const originalText = shareBtn.innerHTML;
-                        shareBtn.innerHTML = '<span>✅</span> Copied to Clipboard!';
-                        setTimeout(() => {
-                            shareBtn.innerHTML = originalText;
-                        }, 2000);
-                        
-                        alert('The letter has been copied to your clipboard! You can now paste it into any message or document to share with Abdullah.');
-                    })
-                    .catch(err => {
-                        console.error('Failed to copy: ', err);
-                        alert('Could not copy to clipboard. Please select and copy the text manually.');
-                    });
-            }
-            
-            // Print letter functionality
-            printBtn.addEventListener('click', function() {
-                // Create a printable version
-                const printWindow = window.open('', '_blank');
-                printWindow.document.write(`
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <title> Letter to Abdullah</title>
-                        <style>
-                            @media print {
-                                @page { margin: 0.5in; }
-                                body { font-family: 'Georgia', serif; color: #5a3921; line-height: 1.8; }
-                                h1 { text-align: center; color: #8b4513; border-bottom: 2px solid #d4a76a; padding-bottom: 10px; }
-                                .quote { font-style: italic; margin: 25px 0; padding: 20px; background-color: #f9f3e9; border-left: 4px solid #d4a76a; }
-                                .signature { font-family: 'Courier New', monospace; font-size: 1.5rem; text-align: right; margin-top: 40px; color: #8b0000; font-weight: bold; }
-                                .date { font-style: italic; text-align: right; margin-bottom: 30px; }
-                            }
-                            body { font-family: 'Georgia', serif; color: #5a3921; line-height: 1.8; padding: 40px; max-width: 600px; margin: 0 auto; }
-                            h1 { text-align: center; color: #8b4513; border-bottom: 2px solid #d4a76a; padding-bottom: 10px; }
-                            .quote { font-style: italic; margin: 25px 0; padding: 20px; background-color: #f9f3e9; border-left: 4px solid #d4a76a; }
-                            .signature { font-family: 'Courier New', monospace; font-size: 1.5rem; text-align: right; margin-top: 40px; color: #8b0000; font-weight: bold; }
-                            .date { font-style: italic; text-align: right; margin-bottom: 30px; }
-                        </style>
-                    </head>
-                    <body>
-                        <h1>A Birthday Letter to Abdullah</h1>
-                        <div class="date">${now.toLocaleDateString('en-US', options)}</div>
-                        <div>My Dearest Abdullah,</div>
-                        <br>
-                        <div>Happiest Birthday to you. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.</div>
-                        <br>
-                        <div>Forever and always.</div>
-                        <br>
-                        <div>I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…</div>
-                        <br>
-                        <div class="quote">
-                            "May time keep you alive.<br>
-                            May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
-                            If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
-                            May the doors of mercy remain open for you and never receive the command to close.<br>
-                            May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
-                            May the water of eternal life flow through your being."
-                        </div>
-                        <br>
-                        <div class="signature">
-                            Yours always,<br>
-                            JUNAINAH 💗
-                        </div>
-                    </body>
-                    </html>
-                `);
-                
-                printWindow.document.close();
-                printWindow.focus();
-                
-                // Wait a bit before printing
-                setTimeout(() => {
-                    printWindow.print();
-                    printWindow.close();
-                }, 500);
-            });
-            
-            // Add keyboard shortcuts
-            document.addEventListener('keydown', function(e) {
-                // Ctrl+S or Cmd+S to save
-                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                    e.preventDefault();
-                    saveBtn.click();
-                }
-                
-                // Ctrl+P or Cmd+P to print
-                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    e.preventDefault();
-                    printBtn.click();
-                }
-                
-                // Space or Enter to toggle envelope
-                if (e.key === ' ' || e.key === 'Enter') {
-                    e.preventDefault();
-                    toggleEnvelope();
-                }
-            });
+        // Get envelope element
+        const envelope = document.getElementById('envelope');
+        
+        // Auto-open envelope after 1 second
+        setTimeout(() => {
+            envelope.classList.add('open');
+        }, 1000);
+        
+        // Click envelope to open/close
+        envelope.addEventListener('click', function() {
+            envelope.classList.toggle('open');
+        });
+        
+        // Press any key to open/close
+        document.addEventListener('keydown', function() {
+            envelope.classList.toggle('open');
         });
     </script>
 </body>
