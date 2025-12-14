@@ -1,125 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Abdullah 💖</title>
+    <title>For Abdullah</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            background-color: #f9f3e9;
-            font-family: 'Georgia', serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        /* Simple heart background */
-        .heart-bg {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            top: 0;
-            left: 0;
-        }
-        
-        .heart {
-            position: absolute;
-            color: rgba(231, 76, 60, 0.1);
-            font-size: 80px;
-            animation: float 15s infinite linear;
-        }
-        
-        /* Place hearts in corners */
-        .heart:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-        .heart:nth-child(2) { top: 15%; right: 8%; animation-delay: 3s; }
-        .heart:nth-child(3) { bottom: 20%; left: 10%; animation-delay: 6s; }
-        .heart:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 9s; }
-        .heart:nth-child(5) { top: 50%; left: 3%; animation-delay: 12s; }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
-            25% { transform: translateY(-10px) rotate(5deg); opacity: 0.15; }
-            50% { transform: translateY(5px) rotate(-5deg); opacity: 0.2; }
-            75% { transform: translateY(-5px) rotate(5deg); opacity: 0.15; }
-        }
-        
-        .container {
-            max-width: 800px;
-            width: 100%;
+            background: #f9f3e9;
+            font-family: Georgia;
             text-align: center;
-            padding-top: 80px;
-            position: relative;
-            z-index: 10;
+            padding: 50px;
+            margin: 0;
         }
         
         h1 {
             color: #8b4513;
-            font-size: 2.8rem;
-            margin-bottom: 60px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 10;
-            background: rgba(249, 243, 233, 0.9);
-            padding: 15px 25px;
-            border-radius: 10px;
-            display: inline-block;
-            border: 2px solid #e6d5b8;
+            margin-bottom: 40px;
         }
         
+        /* Envelope */
         .envelope-container {
             position: relative;
-            width: 320px;
-            height: 220px;
-            margin: 0 auto;
+            width: 300px;
+            height: 200px;
+            margin: 40px auto;
             cursor: pointer;
-            margin-top: 40px;
-            z-index: 10;
         }
         
         .envelope {
             position: absolute;
             width: 100%;
             height: 100%;
-            transition: all 0.8s ease;
-            top: 50px;
-        }
-        
-        .envelope-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #d4a76a;
+            background: #d4a76a;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
             border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        .envelope-front {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #c18f52;
-            clip-path: polygon(50% 50%, 0 0, 100% 0);
-            border-radius: 10px;
-            transform-origin: top;
-            transition: transform 1s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             z-index: 2;
         }
         
-        .envelope.open .envelope-front {
-            transform: rotateX(180deg);
+        .envelope-top {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #c18f52;
+            clip-path: polygon(50% 50%, 0 0, 100% 0);
+            border-radius: 10px;
+            transform-origin: top;
+            transition: transform 0.8s;
+            z-index: 3;
         }
         
         .seal {
@@ -127,219 +53,134 @@
             bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             background: #8b0000;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
-            z-index: 3;
-            border: 3px solid #a52a2a;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            font-size: 24px;
+            z-index: 4;
         }
         
+        /* Letter */
         .letter {
-            width: 300px;
-            min-height: 400px;
-            background: #fffaf0;
-            margin: -80px auto 0;
+            width: 280px;
+            background: white;
             padding: 30px;
+            margin: 30px auto;
             border-radius: 5px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border: 1px solid #e6d5b8;
             text-align: left;
+            display: none;
             position: relative;
-            z-index: 10;
-            opacity: 0;
-            transform: translateY(-80px);
-            transition: all 1s ease 0.3s;
+            z-index: 1;
         }
         
-        .envelope.open ~ .letter {
-            opacity: 1;
-            transform: translateY(0);
+        .letter.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .letter-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #5a3921;
-        }
-        
-        .letter-header {
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px dashed #d4a76a;
-        }
-        
-        .letter-header h2 {
-            color: #8b4513;
-            font-size: 1.8rem;
-        }
-        
-        .blessing {
-            font-style: italic;
-            margin: 25px 0;
-            padding: 20px;
-            background: #f5efe6;
-            border-left: 4px solid #d4a76a;
-            border-radius: 3px;
-            line-height: 1.7;
         }
         
         .signature {
             text-align: right;
             margin-top: 30px;
-            font-family: 'Courier New', monospace;
-            font-size: 1.5rem;
-            color: #8b0000;
             font-weight: bold;
-        }
-        
-        .click-text {
-            color: #a0522d;
-            margin-top: 40px;
-            margin-bottom: 10px;
-            font-style: italic;
-            position: relative;
-            z-index: 10;
-            background: rgba(249, 243, 233, 0.9);
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            border: 1px solid #e6d5b8;
-        }
-        
-        footer {
-            margin-top: 50px;
-            color: #a0522d;
-            font-style: italic;
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 10;
-            background: rgba(249, 243, 233, 0.9);
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            border: 1px solid #e6d5b8;
-        }
-        
-        @media (max-width: 600px) {
-            .envelope-container {
-                width: 280px;
-                height: 190px;
-                margin-top: 50px;
-            }
-            
-            .letter {
-                width: 260px;
-                padding: 20px;
-                margin-top: -60px;
-                transform: translateY(-60px);
-            }
-            
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 70px;
-            }
-            
-            .container {
-                padding-top: 50px;
-            }
-            
-            .envelope {
-                top: 40px;
-            }
-            
-            .heart {
-                font-size: 50px;
-            }
+            color: #8b0000;
         }
     </style>
 </head>
 <body>
-    <!-- Simple heart background -->
-    <div class="heart-bg">
-        <div class="heart">❤️</div>
-        <div class="heart">💖</div>
-        <div class="heart">💗</div>
-        <div class="heart">💓</div>
-        <div class="heart">💕</div>
+    <h1>💌 For My Dearest Abdullah 💌</h1>
+    
+    <div class="envelope-container" onclick="toggleLetter()">
+        <div class="envelope"></div>
+        <div class="envelope-top" id="envelopeTop"></div>
+        <div class="seal">💖</div>
     </div>
     
-    <div class="container">
-        <h1>For My Dearest Abdullah 💖</h1>
+    <p style="color: #a0522d; font-style: italic;">Click the envelope to open your letter</p>
+    
+    <div class="letter" id="letter">
+        <div style="text-align: center; margin-bottom: 20px; border-bottom: 1px dashed #d4a76a; padding-bottom: 10px;">
+            <h2 style="color: #8b4513; margin: 0;">My Dearest Abdullah,</h2>
+            <p style="margin: 5px 0; color: #a0522d;">On Your Special Birthday</p>
+        </div>
         
-        <div class="envelope-container">
-            <div class="envelope" id="envelope">
-                <div class="envelope-back"></div>
-                <div class="envelope-front"></div>
-                <div class="seal">💖</div>
-            </div>
+        <div class="letter-content">
+            <p>Happiest Birthday to you, Abdullah. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.</p>
             
-            <div class="letter" id="letter">
-                <div class="letter-header">
-                    <h2>My Dearest Abdullah,</h2>
-                    <p>On Your Special Birthday</p>
-                </div>
-                
-                <div class="letter-content">
-                    <p>Happiest Birthday to you, Abdullah. May you have everything you want in your life, whether it is success, happiness, or love. I pray that happiness always recognizes you, and sorrow never finds its way to you. May you find someone you truly love in your life. No matter where life takes us, please know that my love for you is as constant as the northern star, shining brightly through both joyous days and quiet nights.</p>
-                    
-                    <p>Forever and always.</p>
-                    
-                    <p>I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…</p>
-                    
-                    <div class="blessing">
-                        "May time keep you alive.<br>
-                        May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
-                        If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
-                        May the doors of mercy remain open for you and never receive the command to close.<br>
-                        May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
-                        May the water of eternal life flow through your being."
-                    </div>
-                </div>
-                
-                <div class="signature">
-                    Yours always,<br>
-                    JUNAINAH <span style="color:#e74c3c; font-size:2rem;">💗</span>
-                </div>
-                
-                <div style="text-align:right; margin-top:20px; font-style:italic; color:#a0522d;">
-                    15 December 2025
-                </div>
+            <p>Forever and always.</p>
+            
+            <p>I wish I could speak all the blessings I feel for you at once, so here's a little from my heart…</p>
+            
+            <div style="font-style: italic; margin: 20px 0; padding: 15px; background: #f5efe6; border-left: 3px solid #d4a76a;">
+                "May time keep you alive.<br>
+                May springs sacrifice themselves for you and grieve at the thought of being separated from you.<br>
+                If fate ever intends to write sorrow in your name, then I bow my head in prostration and pray that before doing so, fate loses its memory and forgets to write sorrow for you.<br>
+                May the doors of mercy remain open for you and never receive the command to close.<br>
+                May the shadows of restlessness become blind and deaf, finding no path that leads them to you.<br>
+                May the water of eternal life flow through your being."
             </div>
         </div>
         
-        <p class="click-text">Click the envelope to open your letter</p>
+        <div class="signature">
+            Yours always,<br>
+            JUNAINAH <span style="color: #e74c3c; font-size: 20px;">💗</span>
+        </div>
         
-        <footer>
-            Made with love for you, Abdullah
-        </footer>
+        <div style="text-align: right; margin-top: 20px; font-style: italic; color: #a0522d;">
+            15 December 2025
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; color: #a0522d; font-style: italic;">
+        Made with love for you, Abdullah
     </div>
 
     <script>
-        // Get envelope element
-        const envelope = document.getElementById('envelope');
+        let isOpen = false;
         
-        // Auto-open envelope after 1 second
+        function toggleLetter() {
+            const envelopeTop = document.getElementById('envelopeTop');
+            const letter = document.getElementById('letter');
+            
+            if (!isOpen) {
+                // Open envelope
+                envelopeTop.style.transform = 'rotateX(180deg)';
+                setTimeout(() => {
+                    letter.classList.add('show');
+                }, 400);
+            } else {
+                // Close envelope
+                letter.classList.remove('show');
+                setTimeout(() => {
+                    envelopeTop.style.transform = 'rotateX(0deg)';
+                }, 300);
+            }
+            
+            isOpen = !isOpen;
+        }
+        
+        // Auto-open after 2 seconds
         setTimeout(() => {
-            envelope.classList.add('open');
-        }, 1000);
-        
-        // Click envelope to open/close
-        envelope.addEventListener('click', function() {
-            envelope.classList.toggle('open');
-        });
-        
-        // Press any key to open/close
-        document.addEventListener('keydown', function() {
-            envelope.classList.toggle('open');
-        });
+            if (!isOpen) {
+                toggleLetter();
+            }
+        }, 2000);
     </script>
 </body>
 </html>
